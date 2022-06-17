@@ -16,4 +16,5 @@ function navResposnive(){
         nav.style["max-height"] = "80px";
 }
 
-navButton.addEventListener("click", navResposnive);
+setTimeout(navButton.addEventListener("click", navResposnive), 1500);
+// navButton.addEventListener("click", navResposnive);
