@@ -7,7 +7,7 @@ let navButton;
 setTimeout(() => {
     nav = document.getElementById("nav");
     navButton = document.getElementById("navButton");
-});
+}, 1000);
 
 function navResposnive(){
     if(nav.style["max-height"] == "80px") 
