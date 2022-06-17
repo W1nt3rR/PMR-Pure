@@ -47,5 +47,5 @@ fetch('js/nav.html')
     newelem.innerHTML = text;
     newelem.id = "nav";
     newelem.style["max-height"] = "80px";
-    oldelem.parentNode.replaceChild(newelem,oldelem);
+    oldelem.parentNode.replaceChild(newelem, oldelem);
 })
