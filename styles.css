@@ -273,6 +273,19 @@ nav a {
     
 }
 
+#navButton {
+    display: none;
+    /* background-color: #960096; */
+    height: 80px;
+    width: 80px;
+    padding: 16px;
+}
+
+#navButton img {
+    width: 100%;
+    height: 100%;
+}
+
 
 
 @media screen and (max-width: 1400px){
@@ -281,6 +294,34 @@ nav a {
         width: 45%;
     }
     
+}
+
+@media screen and (max-width: 1000px){
+
+    nav {
+        display: block;
+        overflow: hidden;
+    }
+
+    #navButton {
+        display: block;
+    }
+
+    .sideMargins {
+        height: 0;
+    }
+
+    #navLogo {
+        float: right;
+        position: absolute;
+        top: 12px;
+        right: 12px;
+    }
+
+    nav > div:hover nav{
+        min-height: 80px;
+    }
+
 }
 
 @media screen and (max-width: 800px){
