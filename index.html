@@ -150,10 +150,14 @@
 
     <script>
         const page = 0;
-        let elements = document.getElementsByClassName("navItem");
-        console.log(elements);
-        elements[page].style["background-color"] = "#69006969";
-        elements[page].style["color"] = "#960096";
+        function fn() {
+            let elements = document.getElementsByClassName("navItem");
+            console.log(elements);
+            elements[page].style["background-color"] = "#69006969";
+            elements[page].style["color"] = "#960096"; 
+        }
+
+        setTimeout(fn, 1000);
     </script>
     <!--end of Navigation bar-->
 
