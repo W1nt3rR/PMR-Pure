@@ -1,3 +1,4 @@
+// Load Common Footer
 fetch('js/footer.html')
     .then(res => res.text())
     .then(text => {
