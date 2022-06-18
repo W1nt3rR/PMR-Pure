@@ -1,4 +1,4 @@
-function fn(page) {
+function fn() {
     let page = document.getElementById("page").textContent;
     let elements = document.getElementsByClassName("navItem");
     console.log(elements);
