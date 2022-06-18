@@ -149,9 +149,15 @@
     </script>
 
     <script>
-        let element = document.getElementById("navModules");
-        element.style["background-color"] = "#69006969";
-        element.style["color"] = "#960096";
+        const page = 2;
+        function fn() {
+            let elements = document.getElementsByClassName("navItem");
+            console.log(elements);
+            elements[page].style["background-color"] = "#69006969";
+            elements[page].style["color"] = "#960096"; 
+        }
+
+        setTimeout(fn);
     </script>
     <!--end of Navigation bar-->
 
