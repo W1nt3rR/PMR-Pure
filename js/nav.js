@@ -1,12 +1,30 @@
-fetch('js/nav.html')
-.then(res => res.text())
-.then(text => {
-    // let oldelem = document.querySelector("script#navbar-js");
+function navResponsive() {
     let nav = document.getElementById("nav");
-    // let newelem = document.createElement("nav");
-    nav.innerHTML = text;
-    // newelem.id = "nav";
-    // newelem.style["max-height"] = "80px";
-    // oldelem.parentNode.replaceChild(newelem, oldelem);
-});
+    let navButton = document.getElementById("navButton");
+
+    function changeNavSize(){
+        if(nav.style["max-height"] == "80px") 
+            nav.style["max-height"] = "100vh"
+        else
+            nav.style["max-height"] = "80px";
+    }
+
+    navButton.addEventListener("click", changeNavSize);
+}
+
+function currentPage() {
+    let page = document.getElementById("page").textContent;
+    let elements = document.getElementsByClassName("navItem");
+    elements[page].style["background-color"] = "#69006969";
+    elements[page].style["color"] = "#960096"; 
+}
+
+fetch('js/nav.html')
+    .then(res => res.text())
+    .then(text => {
+        let nav = document.getElementById("nav");
+        nav.innerHTML = text;
+    })
+    .then(navResponsive)
+    .then(currentPage);
 
