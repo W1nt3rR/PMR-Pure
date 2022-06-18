@@ -19,6 +19,8 @@ function currentPage() {
     elements[page].style["color"] = "#960096"; 
 }
 
+
+// Load Nav
 fetch('js/nav.html')
     .then(res => res.text())
     .then(text => {
