@@ -31,7 +31,7 @@ nav {
     display: flex;
     /* height: 80px; */
     width: 100%;
-    position: sticky;
+    position: fixed;
     top: 0;
     /* font-size: 14pt; */
     align-items: center;
@@ -87,7 +87,7 @@ nav a {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh); /*  - 80px*/
+    height: calc(100vh - 80px);
 }
 
 #home h1 {
@@ -98,7 +98,7 @@ nav a {
 
 #bgImage {
     width: 100%;
-    height: calc(100vh); /*  - 80px*/
+    height: calc(100vh - 80px);
     position: absolute;
     display: flex;
     align-items: center;
