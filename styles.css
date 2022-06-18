@@ -296,7 +296,9 @@ nav a {
     background-color: var(--color-nav-hover);
 }
 
-
+#variable {
+    display: none;
+}
 
 @media screen and (max-width: 1400px){
 
