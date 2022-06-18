@@ -2,9 +2,9 @@
 // let navButton = document.getElementById("navButton");
 
 
-function navResposnive(){
+function navResponsive(){
     let nav = document.getElementById("nav");
-    
+
     if(nav.style["max-height"] == "80px") 
         nav.style["max-height"] = "100vh"
     else
