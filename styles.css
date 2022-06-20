@@ -80,7 +80,7 @@ nav a {
 #content {
     /* min-height: 200vh; */
     margin-top: 80px;
-    padding: 0 var(--side-padding) 64px var(--side-padding);
+    padding: 0 var(--side-padding) 128px var(--side-padding);
 }
 
 #home {
@@ -121,8 +121,9 @@ nav a {
 .card {
     margin: 16px 0;
     width: 30%;
-    min-height: 200px;
+    min-height: 128px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
     text-align: center;
@@ -142,7 +143,7 @@ nav a {
 }
 
 .card img {
-    width: 128px;
+    height: 128px;
     margin: auto;
     border-radius: var(--border-radius);
 }
@@ -251,7 +252,7 @@ nav a {
 }
 
 .navCard {
-    height: 256px;
+    height: 192px;
     width: 80%;
     box-shadow: var(--shadow);
     border-radius: var(--border-radius);
@@ -275,7 +276,7 @@ nav a {
     align-items: center;
     justify-content: space-between;
     /* text-align: center; */
-    padding: 24px 8%;
+    padding: 24px 4% 24px 8%;
     gap: 32px;
     
 }
