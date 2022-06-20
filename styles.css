@@ -260,6 +260,7 @@ nav a {
     transition: var(--transition);
     display: flex;
     margin: 8px 0;
+    background-color: white;
 }
 
 .navCard img {
@@ -305,14 +306,36 @@ nav a {
     display: none;
 }
 
+#recentChanges {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 95%;
+    padding: 32px 64px;
+}
+
+#recentChanges h1{
+    font-size: 24pt;
+    /* text-align: center; */
+    width: 100%;
+}
+
+#recentChanges h2 {
+    padding: 0 16px;
+    margin: 0;
+}
+
 #magiskDesc {
     padding-top: var(--nav-size);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #magiskDescContainer {
     display: flex;
     height: auto;
-    width: 100%;
+    width: 95%;
 }
 
 #magiskDescContainer img{
@@ -323,6 +346,13 @@ nav a {
     padding: 24px;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
+}
+
+#magiskDescContainer > div > div {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 
@@ -401,6 +431,38 @@ nav a {
         align-items: center;
         gap: 8px;
         height: auto;
+        text-align: center;
+    }
+    
+}
+
+@media screen and (max-width: 900px){
+
+    #magiskDescContainer {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #magiskDescContainer img {
+        height: 25vh;
+        width: auto;
+        margin: auto;
+    }
+
+    #magiskDescContainer > div {
+        padding: 8px;
+    }
+
+    #magiskDescContainer > div > div {
+        flex-direction: column;
+    }
+
+    #recentChanges {
+        width: 100%;
+        padding: 24px 16px;
+    }
+
+    #recentChanges h1{
         text-align: center;
     }
     
