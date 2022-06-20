@@ -225,11 +225,11 @@ nav a {
 }
 
 .aButton {
-    width: 56px;
-    height: 56px;
+    width: 48px;
+    height: 48px;
     background-color: var(--color);
     border-radius: var(--border-radius);
-    padding: 10px;
+    padding: 8px;
     margin: 0 4px;
     transition: var(--transition);
 }
