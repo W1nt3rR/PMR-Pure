@@ -61,7 +61,7 @@ nav {
 
 .navItem:hover {
     background-color: var(--color-nav-hover);
-    color: var(--color-hover);
+    color: white;
 }
 
 nav a {
@@ -112,7 +112,7 @@ nav a {
 }
 
 #modules {
-    padding-top: 80px;
+    padding-top: var(--nav-size);
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -301,9 +301,30 @@ nav a {
     background-color: var(--color-nav-hover);
 }
 
-#page {
+.hidden {
     display: none;
 }
+
+#magiskDesc {
+    padding-top: var(--nav-size);
+}
+
+#magiskDescContainer {
+    display: flex;
+    height: auto;
+    width: 100%;
+}
+
+#magiskDescContainer img{
+    height: 35vh;
+}
+
+#magiskDescContainer > div{
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
 
 @media screen and (max-width: 1400px){
 

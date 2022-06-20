@@ -18,7 +18,7 @@ function currentPage() {
     let page = document.getElementById("page").textContent;
     let elements = document.getElementsByClassName("navItem");
     elements[page].style["background-color"] = "#69006969";
-    elements[page].style["color"] = "#960096"; 
+    elements[page].style["color"] = "#FFFFFF"; 
 }
 
 // Load Common Nav

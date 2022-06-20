@@ -10,111 +10,34 @@
     <!-- <script src="js/jquery-3.6.0.min.js"></script> -->
 </head>
 <body>
-    <div id="bgImage">
+    <!-- <div id="bgImage">
         <img src="images/magisk-svgrepo-com.svg" alt="">
-    </div>
+    </div> -->
 
     <div id="content">
 
-        <section id="home">
+        <!-- <section id="home">
             <h1>Personal Magisk Repository.</h1>
+        </section> -->
+        <section id="magiskDesc">
+            <div class="navCard" id="magiskDescContainer">
+                <img src="images/magisk-trimmed.png" alt="">
+                <div>
+                    <p>Magisk is a suite of open source software for customizing Android, supporting devices higher than Android 5.0. Some highlight features:</p>
+                    <ul>
+                        <li><strong>MagiskSU:</strong> Provide root access for applications</li>
+                        <li><strong>Magisk Modules:</strong> Modify read-only partitions by installing modules</li>
+                        <li><strong>MagiskBoot:</strong> The most complete tool for unpacking and repacking Android boot images</li>
+                        <li><strong>Zygisk:</strong> Run code in every Android applications' processes</li>
+                    </ul>
+                    <button class="btnCommon btnWhite">Learn More</button>
+                    <button class="btnCommon btnColor">Download</button>
+                </div>
+                
+            </div>
         </section>
+        
 
-        <section id="navCards">
-
-            <div class="navCard">
-                <img src="images/cogwheel_nice_android.svg" alt="">
-                <div class="navCardContent">
-                    <h1>Find great modules on the Modules page</h1>
-                    <button class="btnCommon btnColor">Modules</button>
-                </div>
-            </div>
-
-            <div class="navCard">
-                <img src="images/cogwheel_nice_android.svg" alt="">
-                <div class="navCardContent">
-                    <h1>Find great modules on the Modules page</h1>
-                    <button class="btnCommon btnColor">Modules</button>
-                </div>
-            </div>
-            
-        </section>
-
-        <section id="modules">
-            <div class="card">
-                <div>
-                    <img src="images/modules/storage_isolation.png" alt="">
-                </div>
-                <h1>Storage Isolation</h1>
-                <p>Elegantly solve the problem of bad apps abusing storage permissions</p>
-                <h3>Rikka</h3>
-                <div>
-                    <button class="btnCommon btnWhite">Learn More</button>
-                    <button class="btnCommon btnColor">Download</button>
-                </div>
-            </div>
-            <div class="card">
-                <div>
-                    <img src="images/modules/lsposed.jpeg" alt="">
-                </div>
-                <h1>LSPosed</h1>
-                <p>LSPosed Framework for XPosed Modules</p>
-                <h3>LSPosed Team</h3>
-                <div>
-                    <button class="btnCommon btnWhite">Learn More</button>
-                    <button class="btnCommon btnColor">Download</button>
-                </div>
-            </div>
-            <div class="card">
-                <div>
-                    <img src="images/modules/storage_isolation.png" alt="">
-                </div>
-                <h1>Storage Isolation</h1>
-                <p>Elegantly solve the problem of bad apps abusing storage permissions</p>
-                <h3>Rikka</h3>
-                <div>
-                    <button class="btnCommon btnWhite">Learn More</button>
-                    <button class="btnCommon btnColor">Download</button>
-                </div>
-            </div>
-            <div class="card">
-                <div>
-                    <img src="images/modules/storage_isolation.png" alt="">
-                </div>
-                <h1>Storage Isolation</h1>
-                <p>Elegantly solve the problem of bad apps abusing storage permissions</p>
-                <h3>Rikka</h3>
-                <div>
-                    <button class="btnCommon btnWhite">Learn More</button>
-                    <button class="btnCommon btnColor">Download</button>
-                </div>
-            </div>
-            <div class="card">
-                <div>
-                    <img src="images/modules/storage_isolation.png" alt="">
-                </div>
-                <h1>Storage Isolation</h1>
-                <p>Elegantly solve the problem of bad apps abusing storage permissions</p>
-                <h3>Rikka</h3>
-                <div>
-                    <button class="btnCommon btnWhite">Learn More</button>
-                    <button class="btnCommon btnColor">Download</button>
-                </div>
-            </div>
-            <div class="card">
-                <div>
-                    <img src="images/modules/storage_isolation.png" alt="">
-                </div>
-                <h1>Storage Isolation</h1>
-                <p>Elegantly solve the problem of bad apps abusing storage permissions</p>
-                <h3>Rikka</h3>
-                <div>
-                    <button class="btnCommon btnWhite">Learn More</button>
-                    <button class="btnCommon btnColor">Download</button>
-                </div>
-            </div>
-
-        </section>
     </div>
 
     <section id="footer">
@@ -125,7 +48,7 @@
     <nav id="nav" style="max-height: 80px;">
         <div class="sideMargins"></div>
     </nav>
-    <p id="page">1</p>
+    <p class="hidden" id="page">1</p>
     <script src="js/nav.js"></script>
 
 </body>
