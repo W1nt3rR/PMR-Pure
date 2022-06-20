@@ -279,7 +279,10 @@ nav a {
     /* text-align: center; */
     padding: 24px 4% 24px 8%;
     gap: 32px;
-    
+}
+
+.navCardContent h1{
+    font-size: 16pt;
 }
 
 #navButton {
