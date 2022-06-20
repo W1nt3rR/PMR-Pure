@@ -80,7 +80,7 @@ nav a {
 #content {
     /* min-height: 200vh; */
     margin-top: 80px;
-    padding: 0 var(--side-padding) 128px var(--side-padding);
+    padding: 0 var(--side-padding) var(--side-padding) var(--side-padding);
 }
 
 #home {
