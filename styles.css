@@ -78,9 +78,9 @@ nav a {
 }
 
 #content {
-    min-height: 200vh;
+    /* min-height: 200vh; */
     margin-top: 80px;
-    padding: 0 var(--side-padding);
+    padding: 0 var(--side-padding) 64px var(--side-padding);
 }
 
 #home {
@@ -273,7 +273,10 @@ nav a {
     flex-grow: 1;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    /* text-align: center; */
+    padding: 24px 8%;
+    gap: 32px;
     
 }
 
@@ -306,7 +309,25 @@ nav a {
     .card {
         width: 45%;
     }
-    
+
+}
+
+@media screen and (max-width: 1200px) {
+
+    .navCard {
+        flex-direction: column;
+        height: auto;
+    }
+    .navCardContent {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navCard img {
+        height: auto;
+        width: 50%;
+        margin: auto;
+    }
 }
 
 @media screen and (max-width: 1000px){
