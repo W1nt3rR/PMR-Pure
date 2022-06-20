@@ -354,13 +354,13 @@ nav a {
 @media screen and (max-width: 800px){
 
     .card {
-        width: 95%;
+        width: 100%;
     }
 
     .navCard {
         flex-direction: column;
         height: auto;
-        width: 95%;
+        width: 100%;
         margin: 16px 0;
     }
     .navCardContent {
