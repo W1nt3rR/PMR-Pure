@@ -315,20 +315,7 @@ nav a {
 
 @media screen and (max-width: 1200px) {
 
-    .navCard {
-        flex-direction: column;
-        height: auto;
-    }
-    .navCardContent {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .navCard img {
-        height: auto;
-        width: 50%;
-        margin: auto;
-    }
+    
 }
 
 @media screen and (max-width: 1000px){
@@ -369,5 +356,35 @@ nav a {
     .card {
         width: 95%;
     }
+
+    .navCard {
+        flex-direction: column;
+        height: auto;
+        width: 95%;
+        margin: 16px 0;
+    }
+    .navCardContent {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navCard img {
+        height: auto;
+        width: 50%;
+        margin: auto;
+    }
     
 }
+
+@media screen and (max-width: 600px){
+
+    #bgImage img{
+        height: auto;
+        width: 100%;
+    }
+
+    #home h1 {
+        font-size: 48pt;
+    }
+}
+
