@@ -10,8 +10,9 @@ const errorMsgBox = document.getElementById("formErrorMsg");
 function addErrorMessage(errorMsg) {
     if(errorMsgBox.textContent == "")
         errorMsgBox.textContent = errorMsg;
-    else
-        errorMsgBox.textContent = errorMsgBox.textContent + ", " + errorMsg;
+    else {
+        errorMsgBox.innerHTML += `,<br>${errorMsg}`;
+    }
 }
 
 function clearErrorBox() {
@@ -20,7 +21,7 @@ function clearErrorBox() {
 
 function isEmpty(input) {
     if(input.value == "") {
-        addErrorMessage(`${input.name} cannot be empty`);
+        // addErrorMessage(`${input.name} cannot be empty`);
         return false;
     } else {
         return true;
@@ -29,7 +30,7 @@ function isEmpty(input) {
 
 function hasMinChars(input, length) {
     if(input.value.length <= length) {
-        addErrorMessage(`${input.name} needs to be longer`);
+        addErrorMessage(`${input.name} needs to be longer than ${length} characters`);
         return false;
     } else {
         return true;
@@ -42,7 +43,7 @@ function isEmailValid(email) {
     if(valid)
         return true;
     else {
-        addErrorMessage("Your email sucks");
+        addErrorMessage("Your email is invalid");
         return false;
     }
 }

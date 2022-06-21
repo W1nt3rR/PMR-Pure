@@ -434,7 +434,9 @@ nav a {
 }
 
 #emailForm h2 {
-    font-size: 14pt;
+    margin: 0;
+    text-align: left;
+    padding: 0 16px;
 }
 
 #emailForm input {
@@ -448,7 +450,8 @@ nav a {
 
 #emailForm div {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+    /* flex-wrap: wrap; */
 }
 
 #formErrorMsg {
@@ -479,8 +482,19 @@ nav a {
 }
 
 @media screen and (max-width: 1200px) {
+    #emailForm div {
+        flex-wrap: wrap;
+    }
 
-    
+    #emailForm input {
+        width: 100%;
+    }
+
+    #emailForm h2 {
+        width: 100%;
+        text-align: center;
+        margin-top: 16px;
+    }
 }
 
 @media screen and (max-width: 1000px){
@@ -513,7 +527,6 @@ nav a {
     nav > div:hover nav{
         min-height: 80px;
     }
-
 }
 
 @media screen and (max-width: 800px){
@@ -563,15 +576,6 @@ nav a {
     #contactForm {
         width: 100%;
     }
-
-    #emailForm input {
-        width: 100%;
-    }
-
-    #emailForm h2 {
-        width: 100%;
-    }
-    
 }
 
 @media screen and (max-width: 900px){
