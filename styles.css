@@ -127,7 +127,7 @@ nav a {
     justify-content: center;
     flex-wrap: wrap;
     text-align: center;
-    padding: 48px 3%;
+    padding: 48px 16px;
     background-color: var(--base-color);
     box-shadow: var(--shadow);
     border-radius: var(--border-radius);
