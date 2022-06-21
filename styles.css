@@ -344,14 +344,8 @@ nav a {
     margin: 0;
 }
 
-#contactMap {
+#contact {
     width: 100%;
-    height: 50vh;
-    margin-bottom: 32px;
-}
-
-#contactInfoContainer {
-    width: 40%;
 }
 
 #contact h1 {
@@ -362,16 +356,21 @@ nav a {
     text-align: center;
 }
 
+#contactMap {
+    width: 100%;
+    height: 50vh;
+    margin-bottom: 32px;
+}
+
+#contactInfoContainer {
+    width: 40%;
+}
+
 .contactInfo {
     display: flex;
     text-align: left;
     margin-bottom: 16px;
-}
-
-.contactInfo div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 100%;
 }
 
 .contactInfo img {
@@ -380,6 +379,12 @@ nav a {
     margin-right: 12px;
     background-color: var(--color);
     border-radius: var(--border-radius);
+}
+
+.contactInfo div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .contactInfo h3 {
@@ -411,10 +416,7 @@ nav a {
 #contactForm div {
     display: flex;
     align-items: center;
-}
-
-#formErrorMsg {
-    color: red;
+    width: 100%;
 }
 
 .contactFormCommon {
@@ -423,6 +425,10 @@ nav a {
     padding: 0 16px;
     border: 1px solid var(--color);
     border-radius: var(--border-radius);
+}
+
+#formErrorMsg {
+    color: red;
 }
 
 
@@ -437,15 +443,15 @@ nav a {
 
 @media screen and (max-width: 1200px) {
 
-    #emailForm div {
+    #contactForm div {
         flex-wrap: wrap;
     }
 
-    #emailForm input {
+    #contactForm input {
         width: 100%;
     }
 
-    #emailForm h2 {
+    #contactForm h2 {
         width: 100%;
         text-align: center;
         margin-top: 16px;
@@ -535,28 +541,33 @@ nav a {
         width: 50%;
         margin: auto;
     }
-
-
     
+    
+    
+    .contactCard {
+        flex-direction: column;
+    }
+    #contactInfoContainer {
+        width: 100%;
+    }
+    #contactInfo {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+    
+    
+    #contactForm {
+        width: 100%;
+    }
+    
+    
+        
     #footerBottom {
         flex-direction: column;
         align-items: center;
         gap: 8px;
         height: auto;
         text-align: center;
-    }
-
-
-
-    .contactCard {
-        flex-direction: column;
-    }
-    #contactInfo {
-        width: 100%;
-        margin-bottom: 16px;
-    }
-    #contactForm {
-        width: 100%;
     }
 }
 
