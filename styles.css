@@ -378,6 +378,7 @@ nav a {
 #contact > div {
     display: flex;
     width: 100%;
+    padding: 48px 5%;
     /* min-height: 50px; */
     flex-direction: row;
     justify-content: space-between;
