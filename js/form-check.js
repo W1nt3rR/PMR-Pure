@@ -8,15 +8,15 @@ const TextInput = document.getElementById("formText");
 const errorMsgBox = document.getElementById("formErrorMsg");
 
 function addErrorMessage(errorMsg) {
-    if(errorMsgBox.textContent == "")
-        errorMsgBox.textContent = errorMsg;
+    if(errorMsgBox.innerHTML == "")
+        errorMsgBox.innerHTML = errorMsg;
     else {
         errorMsgBox.innerHTML += `,<br>${errorMsg}`;
     }
 }
 
 function clearErrorBox() {
-    errorMsgBox.textContent = "";
+    errorMsgBox.innerHTML = "";
 }
 
 function isEmpty(input) {
