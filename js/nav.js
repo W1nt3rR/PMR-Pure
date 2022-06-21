@@ -29,5 +29,6 @@ fetch('js/nav.html')
         nav.innerHTML = text;
     })
     .then(navResponsive)
-    .then(setTimeout(currentPage, 500));
+    .then(setTimeout(currentPage, 500))
+    .then(setTimeout(currentPage), 1000);
 
