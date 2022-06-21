@@ -112,7 +112,7 @@ nav a {
 }
 
 #modules {
-    padding-top: var(--nav-size);
+    /* padding-top: var(--nav-size); */
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -329,7 +329,7 @@ nav a {
 }
 
 #magiskDesc {
-    padding-top: var(--nav-size);
+    /* padding-top: var(--nav-size); */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -620,6 +620,10 @@ nav a {
 
     #home h1 {
         font-size: 48pt;
+    }
+
+    .sectionPadding {
+        padding-top: var(--side-padding);
     }
 }
 
