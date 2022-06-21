@@ -1,4 +1,4 @@
-const form = document.getElementById("emailForm");
+const form = document.getElementById("contactForm");
 
 const Name = document.getElementById("formName");
 const Email = document.getElementById("formEmail");
