@@ -362,6 +362,113 @@ nav a {
     flex-wrap: wrap;
 }
 
+.sectionPadding {
+    padding-top: 64px;
+}
+
+#contact iframe {
+    width: 100%;
+    height: 50vh;
+    margin-bottom: 32px;
+    box-shadow: var(--shadow);
+    /* background-color: white; */
+    padding: 0;
+}
+
+#contact > div {
+    display: flex;
+    width: 100%;
+    /* min-height: 50px; */
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#contactInfo {
+    width: 40%;
+    /* height: 50%; */
+}
+
+#contact h1 {
+    font-size: 24pt;
+    margin: 0;
+    margin-bottom: 32px;
+}
+
+#contactInfo > div {
+    display: flex;
+    text-align: left;
+    margin-bottom: 16px;
+}
+
+#contactInfo > div div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#contactInfo img {
+    background-color: var(--color);
+    border-radius: var(--border-radius);
+    height: 64px;
+    margin-right: 12px;
+    padding: 12px;
+}
+
+#contactInfo h3 {
+    margin: 0;
+    font-size: 14pt;
+}
+
+#contactInfo p {
+    margin: 0;
+}
+
+#contactForm {
+    width: 60%;
+}
+
+#emailForm{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#emailForm h2 {
+    font-size: 14pt;
+}
+
+#emailForm input {
+    padding: 0 16px;
+}
+
+#emailForm textarea {
+    height: 128px;
+    padding: 16px 16px;
+}
+
+#emailForm div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#formErrorMsg {
+    color: red;
+}
+
+.contactFormCommon {
+    height: 48px;
+    border: 1px solid var(--color);
+    margin-bottom: 16px;
+    border-radius: var(--border-radius);
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+.halfWidth {
+    width: 49%;
+}
 
 @media screen and (max-width: 1400px){
 
@@ -433,12 +540,36 @@ nav a {
     }
 
 
+    
     #footerBottom {
         flex-direction: column;
         align-items: center;
         gap: 8px;
         height: auto;
         text-align: center;
+    }
+
+
+
+    #contact > div {
+        flex-direction: column;
+    }
+
+    #contactInfo {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    #contactForm {
+        width: 100%;
+    }
+
+    #emailForm input {
+        width: 100%;
+    }
+
+    #emailForm h2 {
+        width: 100%;
     }
     
 }
