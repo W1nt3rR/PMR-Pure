@@ -27,20 +27,47 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.fullWidth {
+    width: 100%;
+}
+
+.halfWidth {
+    width: 49%;
+}
+
+.filler {
+    flex-grow: 1;
+}
+
+.hidden {
+    display: none;
+}
+
+.sideMargins {
+    width: 10%;
+    height: var(--nav-size);
+}
+
+.sectionPadding {
+    padding-top: 64px;
+}
+
 nav {
     display: flex;
-    /* height: 80px; */
-    width: 100%;
     position: fixed;
     top: 0;
-    /* font-size: 14pt; */
     align-items: center;
     justify-content: center;
+    width: 100%;
     box-shadow: var(--shadow);
     background-color: var(--base-color);
-    /* padding: 0 var(--side-padding); */
     transition: var(--transition);
+    /* padding: 0 var(--side-padding); */
     z-index: 1;
+}
+
+nav a {
+    text-decoration: none;
 }
 
 #navLogo {
@@ -52,11 +79,11 @@ nav {
     height: 48px;
     display: flex;
     align-items: center;
-    border-radius: var(--border-radius);
     margin: 0 2px;
     padding: 0 24px;
-    color: var(--color);
+    border-radius: var(--border-radius);
     transition: var(--transition);
+    color: var(--color);
 }
 
 .navItem:hover {
@@ -64,22 +91,8 @@ nav {
     color: white;
 }
 
-nav a {
-    text-decoration: none;
-}
-
-.sideMargins {
-    width: 10%;
-    height: var(--nav-size);
-}
-
-.filler {
-    flex-grow: 1;
-}
-
 #content {
-    /* min-height: 200vh; */
-    margin-top: 80px;
+    margin-top: var(--nav-size);
     padding: 0 var(--side-padding) var(--side-padding) var(--side-padding);
 }
 
@@ -112,86 +125,104 @@ nav a {
 }
 
 #modules {
-    /* padding-top: var(--nav-size); */
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
+/* Cards */
 .card {
-    margin: 16px 0;
-    width: 30%;
-    min-height: 128px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-    padding: 48px 16px;
     background-color: var(--base-color);
-    box-shadow: var(--shadow);
     border-radius: var(--border-radius);
     transition: var(--transition);
+    box-shadow: var(--shadow);
 }
-
 .card:hover {
     transform: var(--transform);
 }
 
-.card div {
-    width: 100%;
+/* Navigation Card */
+.navCard {
+    height: 192px;
+    width: 80%;
+    padding: 32px;
+    margin: 8px 0;
+}
+.navCard img {
+    height: 100%;
 }
 
-.card img {
+/* Magisk Card */
+.magiskCard {
+    width: 90%;
+    padding: 32px;
+    margin: 8px 0;
+}
+.magiskCard img{
+    height: 35vh;
+}
+.magiskCard > div{
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.magiskCard > div > div {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+/* Contact Card */
+.contactCard {
+    width: 100%;
+    padding: 48px 5%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Module Card */
+.moduleCard {
+    margin: 16px 0;
+    width: 30%;
+    min-height: 128px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 48px 16px;
+}
+.moduleCard img {
     height: 128px;
     margin: auto;
     border-radius: var(--border-radius);
 }
-
-.card h1 {
+.moduleCard h1 {
     font-size: 24pt;
+}
+
+#navCards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
 }
 
-.card p {
-    /* font-size: 14pt; */
-    width: 100%;
+.navCardContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    gap: 32px;
+    padding: 24px 4% 24px 8%;
 }
 
-.btnCommon {
-    min-width: 128px;
-    height: 48px;
-    /* font-size: 14pt; */
-    transition: var(--transition);
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    margin: 4px;
-    border: none;
-    box-shadow: var(--shadow);
-}
-
-.btnCommon:hover {
-    background-color: var(--color-hover);
-    border-color: var(--color-hover);
-    color: white;
-}
-
-.btnWhite {
-    background-color: white;
-    color: var(--color);
-    border-color: var(--color);
-    
-}
-
-.btnColor {
-    background-color: var(--color);
-    color: white;
-    border: none;
+.navCardContent h1{
+    font-size: 16pt;
 }
 
 #footer {
     height: 400px;
-    /* box-shadow: var(--shadow); */
     display: flex;
     flex-direction: column;
 }
@@ -224,13 +255,39 @@ nav a {
     align-items: center;
 }
 
+.btnCommon {
+    min-width: 128px;
+    height: 48px;
+    margin: 4px;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.btnCommon:hover {
+    background-color: var(--color-hover);
+    color: white;
+}
+
+.btnWhite {
+    background-color: var(--base-color);
+    color: var(--color);
+}
+
+.btnColor {
+    background-color: var(--color);
+    color: white;
+}
+
 .aButton {
     width: 48px;
     height: 48px;
-    background-color: var(--color);
-    border-radius: var(--border-radius);
     padding: 8px;
     margin: 0 4px;
+    background-color: var(--color);
+    border-radius: var(--border-radius);
     transition: var(--transition);
 }
 
@@ -243,57 +300,14 @@ nav a {
     height: 100%;
 }
 
-#navCards {
-    display: flex;
-    /* flex-wrap: wrap; */
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-}
-
-.navCard {
-    height: 192px;
-    width: 80%;
-    box-shadow: var(--shadow);
-    border-radius: var(--border-radius);
-    padding: 32px;
-    transition: var(--transition);
-    display: flex;
-    margin: 8px 0;
-    background-color: white;
-}
-
-.navCard img {
-    height: 100%;
-}
-
-.navCard:hover {
-    transform: var(--transform);
-}
-
-.navCardContent {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* text-align: center; */
-    padding: 24px 4% 24px 8%;
-    gap: 32px;
-}
-
-.navCardContent h1{
-    font-size: 16pt;
-}
-
 #navButton {
     display: none;
-    /* background-color: #960096; */
-    height: calc(var(--nav-size) - 16px);
-    width: calc(var(--nav-size) - 16px);
     margin: 8px;
     padding: 12px;
+    height: calc(var(--nav-size) - 16px);
+    width: calc(var(--nav-size) - 16px);
+    border-radius: var(--border-radius);
     transition: var(--transition);
-    border-radius: 8px;
 }
 
 #navButton img {
@@ -305,21 +319,23 @@ nav a {
     background-color: var(--color-nav-hover);
 }
 
-.hidden {
-    display: none;
+#magiskDesc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#magiskDesc li {
+    margin-bottom: 8px;
 }
 
 #recentChanges {
-    display: flex;
     flex-direction: column;
-    height: auto;
-    width: 95%;
     padding: 32px 64px;
 }
 
 #recentChanges h1{
     font-size: 24pt;
-    /* text-align: center; */
     width: 100%;
 }
 
@@ -328,131 +344,73 @@ nav a {
     margin: 0;
 }
 
-#magiskDesc {
-    /* padding-top: var(--nav-size); */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#magiskDesc li {
-    margin-bottom: 8px;
-}
-
-#magiskDescContainer {
-    display: flex;
-    height: auto;
-    width: 95%;
-}
-
-#magiskDescContainer img{
-    height: 35vh;
-}
-
-#magiskDescContainer > div{
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-#magiskDescContainer > div > div {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-}
-
-.sectionPadding {
-    padding-top: 64px;
-}
-
-#contact iframe {
+#contactMap {
     width: 100%;
     height: 50vh;
     margin-bottom: 32px;
-    box-shadow: var(--shadow);
-    /* background-color: white; */
-    padding: 0;
 }
 
-#contact > div {
-    display: flex;
-    width: 100%;
-    padding: 48px 5%;
-    /* min-height: 50px; */
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-#contactInfo {
+#contactInfoContainer {
     width: 40%;
-    /* height: 50%; */
 }
 
 #contact h1 {
-    font-size: 24pt;
+    width: 100%;
     margin: 0;
     margin-bottom: 32px;
+    font-size: 24pt;
+    text-align: center;
 }
 
-#contactInfo > div {
+.contactInfo {
     display: flex;
     text-align: left;
     margin-bottom: 16px;
 }
 
-#contactInfo > div div{
+.contactInfo div{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-#contactInfo img {
+.contactInfo img {
+    height: 64px;
+    padding: 12px;
+    margin-right: 12px;
     background-color: var(--color);
     border-radius: var(--border-radius);
-    height: 64px;
-    margin-right: 12px;
-    padding: 12px;
 }
 
-#contactInfo h3 {
+.contactInfo h3 {
     margin: 0;
     font-size: 14pt;
 }
 
-#contactInfo p {
+.contactInfo p {
     margin: 0;
 }
 
 #contactForm {
     width: 60%;
-}
-
-#emailForm{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-#emailForm h2 {
+#contactForm h2 {
     margin: 0;
-    text-align: left;
     padding: 0 16px;
 }
 
-#emailForm input {
-    padding: 0 16px;
-}
-
-#emailForm textarea {
+#contactForm textarea {
     height: 128px;
-    padding: 16px 16px;
+    padding: 16px;
 }
 
-#emailForm div {
+#contactForm div {
     display: flex;
     align-items: center;
-    /* flex-wrap: wrap; */
 }
 
 #formErrorMsg {
@@ -461,28 +419,24 @@ nav a {
 
 .contactFormCommon {
     height: 48px;
-    border: 1px solid var(--color);
     margin-bottom: 16px;
+    padding: 0 16px;
+    border: 1px solid var(--color);
     border-radius: var(--border-radius);
 }
 
-.fullWidth {
-    width: 100%;
-}
 
-.halfWidth {
-    width: 49%;
-}
 
+/* Responsiveness */
 @media screen and (max-width: 1400px){
 
-    .card {
+    .moduleCard {
         width: 45%;
     }
-
 }
 
 @media screen and (max-width: 1200px) {
+
     #emailForm div {
         flex-wrap: wrap;
     }
@@ -522,19 +476,49 @@ nav a {
 
     .navItem {
         margin: 12px;
-        /* border-bottom: 1px solid var(--color); */
     }
 
-    nav > div:hover nav{
+    /* nav > div:hover nav{
         min-height: 80px;
+    } */
+}
+
+@media screen and (max-width: 900px){
+
+    .magiskCard {
+        width: 100%;
+        padding: 24px 16px;
+        flex-direction: column;
+    }
+    .magiskCard img {
+        height: 25vh;
+        width: auto;
+        margin: auto;
+    }
+    .magiskCard > div {
+        padding: 8px;
+    }
+    .magiskCard > div > div {
+        flex-direction: column;
+    }
+
+
+    #recentChanges {
+        width: 100%;
+        padding: 24px 16px;
+    }
+    #recentChanges h1{
+        text-align: center;
     }
 }
 
 @media screen and (max-width: 800px){
 
-    .card {
+    .moduleCard {
         width: 100%;
     }
+
+
 
     .navCard {
         flex-direction: column;
@@ -546,7 +530,6 @@ nav a {
         flex-direction: column;
         text-align: center;
     }
-
     .navCard img {
         height: auto;
         width: 50%;
@@ -565,51 +548,16 @@ nav a {
 
 
 
-    #contact > div {
+    .contactCard {
         flex-direction: column;
     }
-
     #contactInfo {
         width: 100%;
         margin-bottom: 16px;
     }
-
     #contactForm {
         width: 100%;
     }
-}
-
-@media screen and (max-width: 900px){
-
-    #magiskDescContainer {
-        flex-direction: column;
-        width: 100%;
-        padding: 24px 16px;
-    }
-
-    #magiskDescContainer img {
-        height: 25vh;
-        width: auto;
-        margin: auto;
-    }
-
-    #magiskDescContainer > div {
-        padding: 8px;
-    }
-
-    #magiskDescContainer > div > div {
-        flex-direction: column;
-    }
-
-    #recentChanges {
-        width: 100%;
-        padding: 24px 16px;
-    }
-
-    #recentChanges h1{
-        text-align: center;
-    }
-    
 }
 
 @media screen and (max-width: 600px){

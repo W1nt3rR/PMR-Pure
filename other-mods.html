@@ -7,12 +7,19 @@
     <title>Personal Magisk Repository</title>
     <link rel="icon" href="images/cogwheel_nice_android.svg">
     <link rel="stylesheet" href="styles.css">
-    <!-- <script src="js/jquery-3.6.0.min.js"></script> -->
 </head>
 <body>
     <div id="bgImage">
         <img src="images/magisk-svgrepo-com.svg" alt="">
     </div>
+
+    <!-- Navigation Bar -->
+    <nav id="nav" style="max-height: 80px;">
+        <div class="sideMargins"></div>
+    </nav>
+    <p class="hidden" id="page">4</p>
+    <script src="js/nav.js"></script>
+    <!-- Navigation Bar -->
 
     <div id="content">
 
@@ -20,38 +27,12 @@
             <h1>Personal Magisk Repository.</h1>
         </section>
 
-        <section id="navCards">
-
-            <div class="navCard">
-                <img src="images/cogwheel_nice_android.svg" alt="">
-                <div class="navCardContent">
-                    <h1>Find great modules on the Modules page</h1>
-                    <button class="btnCommon btnColor">Modules</button>
-                </div>
-            </div>
-
-            <div class="navCard">
-                <img src="images/cogwheel_nice_android.svg" alt="">
-                <div class="navCardContent">
-                    <h1>Find great modules on the Modules page</h1>
-                    <button class="btnCommon btnColor">Modules</button>
-                </div>
-            </div>
-            
-        </section>
-
     </div>
 
-    <section id="footer">
-        
-    </section>
+    <!-- Footer -->
+    <section id="footer"></section>
     <script src="js/footer.js"></script>
-
-    <nav id="nav" style="max-height: 80px;">
-        <div class="sideMargins"></div>
-    </nav>
-    <p class="hidden" id="page">4</p>
-    <script src="js/nav.js"></script>
+    <!-- Footer -->
 
 </body>
 </html>

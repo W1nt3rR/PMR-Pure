@@ -7,21 +7,24 @@
     <title>Personal Magisk Repository</title>
     <link rel="icon" href="images/cogwheel_nice_android.svg">
     <link rel="stylesheet" href="styles.css">
-    <!-- <script src="js/jquery-3.6.0.min.js"></script> -->
 </head>
 <body>
     <div id="bgImage">
         <img src="images/magisk-svgrepo-com.svg" alt="">
     </div>
 
+    <!-- Navigation Bar -->
+    <nav id="nav" style="max-height: 80px;">
+        <div class="sideMargins"></div>
+    </nav>
+    <p class="hidden" id="page">2</p>
+    <script src="js/nav.js"></script>
+    <!-- Navigation Bar -->
+
     <div id="content">
 
-        <!-- <section id="home">
-            <h1>Personal Magisk Repository.</h1>
-        </section> -->
-
         <section id="modules" class="sectionPadding">
-            <div class="card">
+            <div class="card moduleCard">
                 <img src="images/modules/storage_isolation.png" alt="">
                 <h1>Storage Isolation</h1>
                 <p>Elegantly solve the problem of bad apps abusing storage permissions</p>
@@ -32,7 +35,7 @@
                     <button class="btnCommon btnColor" onclick="window.open('https://github.com/RikkaApps/StorageRedirect-assets/releases/tag/assets','_blank')">Download</button>
                 </div>
             </div>
-            <div class="card">
+            <div class="card moduleCard">
                 <img src="images/modules/lsposed.jpeg" alt="">
                 <h1>LSPosed</h1>
                 <p>LSPosed Framework for XPosed Modules</p>
@@ -43,7 +46,7 @@
                     <button class="btnCommon btnColor" onclick="window.open('https://github.com/LSPosed/LSPosed/releases','_blank')">Download</button>
                 </div>
             </div>
-            <div class="card">
+            <div class="card moduleCard">
                 <img src="images/modules/default.png" alt="">
                 <h1>QuickSwitch</h1>
                 <p>QuickSwitch is a Magisk module which systemlessly allows supported launchers to access the recents (QuickStep) APIs.</p>
@@ -54,7 +57,7 @@
                     <button class="btnCommon btnColor" onclick="window.open('https://github.com/skittles9823/QuickSwitch/releases','_blank')">Download</button>
                 </div>
             </div>
-            <div class="card">
+            <div class="card moduleCard">
                 <img src="images/modules/default.png" alt="">
                 <h1>SafetyNet Fix</h1>
                 <p>This module works around hardware attestation and recent updates to SafetyNet CTS profile checks.</p>
@@ -65,7 +68,7 @@
                     <button class="btnCommon btnColor" onclick="window.open('https://github.com/kdrag0n/safetynet-fix/releases','_blank')">Download</button>
                 </div>
             </div>
-            <div class="card">
+            <div class="card moduleCard">
                 <img src="images/modules/default.png" alt="">
                 <h1>Sui</h1>
                 <p>Modern super user interface (SUI) implementation on Android. The name, Sui, also comes from a character.</p>
@@ -76,7 +79,7 @@
                     <button class="btnCommon btnColor" onclick="window.open('https://github.com/RikkaApps/Sui/releases','_blank')">Download</button>
                 </div>
             </div>
-            <div class="card">
+            <div class="card moduleCard">
                 <img src="images/modules/default.png" alt="">
                 <h1>ACC</h1>
                 <p>CC is an Android software mainly intended for extending battery service life. In a nutshell, this is achieved through limiting charging current, temperature, and voltage.</p>
@@ -91,16 +94,10 @@
         </section>
     </div>
 
-    <section id="footer">
-        
-    </section>
+    <!-- Footer -->
+    <section id="footer"></section>
     <script src="js/footer.js"></script>
-    
-    <nav id="nav" style="max-height: 80px;">
-        <div class="sideMargins"></div>
-    </nav>
-    <p class="hidden" id="page">2</p>
-    <script src="js/nav.js"></script>
+    <!-- Footer -->
 
 </body>
 </html>

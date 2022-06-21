@@ -7,37 +7,44 @@
     <title>Personal Magisk Repository</title>
     <link rel="icon" href="images/cogwheel_nice_android.svg">
     <link rel="stylesheet" href="styles.css">
-    <!-- <script src="js/jquery-3.6.0.min.js"></script> -->
 </head>
 <body>
     <div id="bgImage">
         <img src="images/magisk-svgrepo-com.svg" alt="">
     </div>
 
+    <!-- Navigation Bar -->
+    <nav id="nav" style="max-height: 80px;">
+        <div class="sideMargins"></div>
+    </nav>
+    <p class="hidden" id="page">5</p>
+    <script src="js/nav.js"></script>
+    <!-- Navigation Bar -->
+
     <div id="content">
 
         <section id="contact" class="sectionPadding">
 
-            <iframe class="card" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5822.710931971882!2d20.52148057531651!3d43.139064348555436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4756280deac6db43%3A0xeae7cc439dc61e63!2sState%20University%20of%20Novi%20Pazar!5e0!3m2!1sen!2srs!4v1655824300510!5m2!1sen!2srs" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe id="contactMap" class="card" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5822.710931971882!2d20.52148057531651!3d43.139064348555436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4756280deac6db43%3A0xeae7cc439dc61e63!2sState%20University%20of%20Novi%20Pazar!5e0!3m2!1sen!2srs!4v1655824300510!5m2!1sen!2srs" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-            <div class="card">
+            <div class="card contactCard">
                 <h1>Contact</h1>
-                <div id="contactInfo">
-                    <div>
+                <div id="contactInfoContainer">
+                    <div class="contactInfo">
                         <img src="images/icons/location.png" alt="">
                         <div>
                             <h3>Location:</h3>
                             <p>Gorana Pecka 69, Novi Pazar, Serbia</p>
                         </div>
                     </div>
-                    <div>
+                    <div class="contactInfo">
                         <img src="images/icons/email.png" alt="">
                         <div>
                             <h3>Email:</h3>
                             <p>frostywinterr@gmail.com</p>
                         </div>
                     </div>
-                    <div>
+                    <div class="contactInfo">
                         <img src="images/icons/smartphone.png" alt="">
                         <div>
                             <h3>Call:</h3>
@@ -46,62 +53,28 @@
                     </div>
                 </div>
                 
-                <div id="contactForm">
-                    <form action="" id="emailForm">
-                        <input placeholder="Name" type="text" name="Name" id="formName" class="contactFormCommon halfWidth">
-                        <input placeholder="Email" type="text" name="Email" id="formEmail" class="contactFormCommon halfWidth">
-                        <input placeholder="Subject" type="text" name="Subject" id="formSubject" class="contactFormCommon fullWidth">
-                        <textarea placeholder="Message" name="Text" id="formText" cols="30" rows="10" class="contactFormCommon fullWidth"></textarea>
-                        <div>
-                            <input type="submit" name="" id="" class="btnCommon btnColor">
-                            <h2 id="formErrorMsg"></h2>
-                        </div>
-                    </form>
-                </div>
+                <form action="" id="contactForm">
+                    <input placeholder="Name" type="text" name="Name" id="formName" class="contactFormCommon halfWidth">
+                    <input placeholder="Email" type="text" name="Email" id="formEmail" class="contactFormCommon halfWidth">
+                    <input placeholder="Subject" type="text" name="Subject" id="formSubject" class="contactFormCommon fullWidth">
+                    <textarea placeholder="Message" name="Text" id="formText" cols="30" rows="10" class="contactFormCommon fullWidth"></textarea>
+                    <div>
+                        <input type="submit" name="" id="" class="btnCommon btnColor">
+                        <h2 id="formErrorMsg"></h2>
+                    </div>
+                </form>
                 
             </div>
         </section>
-
-        <!-- <section id="home">
-            <h1>Personal Magisk Repository.</h1>
-        </section> -->
-
-
-
-        <!-- <section id="navCards">
-
-            <div class="navCard">
-                <img src="images/cogwheel_nice_android.svg" alt="">
-                <div class="navCardContent">
-                    <h1>Find great modules on the Modules page</h1>
-                    <button class="btnCommon btnColor">Modules</button>
-                </div>
-            </div>
-
-            <div class="navCard">
-                <img src="images/cogwheel_nice_android.svg" alt="">
-                <div class="navCardContent">
-                    <h1>Find great modules on the Modules page</h1>
-                    <button class="btnCommon btnColor">Modules</button>
-                </div>
-            </div>
-            
-        </section> -->
 
     </div>
 
     <script src="js/form-check.js"></script>
 
-    <section id="footer">
-        
-    </section>
+    <!-- Footer -->
+    <section id="footer"></section>
     <script src="js/footer.js"></script>
-
-    <nav id="nav" style="max-height: 80px;">
-        <div class="sideMargins"></div>
-    </nav>
-    <p class="hidden" id="page">5</p>
-    <script src="js/nav.js"></script>
+    <!-- Footer -->
 
 </body>
 </html>
