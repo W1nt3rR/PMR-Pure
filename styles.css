@@ -691,7 +691,8 @@ a {
 
     #footerTop {
         flex-direction: column;
-        align-items: center;
+        align-items: left;
+        padding-left: 64px;
     }
 
     .footerTopBlock {
