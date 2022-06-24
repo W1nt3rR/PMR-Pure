@@ -30,7 +30,7 @@ function isEmpty(input) {
 
 function hasMinChars(input, length) {
     if(input.value.length <= length) {
-        addErrorMessage(`${input.name} mora biti duze od ${length} karaktera`);
+        addErrorMessage(`Polje ${input.name} mora biti duze od ${length} karaktera`);
         return false;
     } else {
         return true;
