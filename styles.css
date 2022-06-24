@@ -7,6 +7,7 @@
     --side-padding: 8%;
     --shadow: 0px 0px 48px rgba(0, 0, 0, 16%);
     --transition: all 0.2s ease-in-out;
+    --transitionSlow: all 0.5s ease-in-out;
     --border-radius: 12px;
     --transform: scale(1.015625);
     --nav-size: 80px;
@@ -534,6 +535,49 @@ a {
 
 #formErrorMsg {
     color: red;
+}
+
+.faqText {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faqText img {
+    width: 48px;
+    height: 48px;
+    padding: 8px;
+    transition: var(--transition);
+}
+
+.faqCard {
+    flex-direction: column;
+    padding: 16px 32px;
+    margin-bottom: 12px;
+}
+
+.faqCard:target .faqDropdownAnswer {
+    max-height: 50vh;
+}
+
+.faqCard h1 {
+    margin: 0; 
+    font-size: 14pt;
+}
+
+.faqDropdownAnswer {
+    max-height: 0;
+    overflow: hidden;
+    transition: var(--transitionSlow);
+    background-color: #EEEEEE;
+    border-radius: var(--border-radius);
+    padding: 0 16px;
+}
+
+.faqDropdownButton {
+    width: 48px;
+    height: 48px;
+    padding: 8px;
 }
 
 

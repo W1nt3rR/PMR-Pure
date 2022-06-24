@@ -1,0 +1,45 @@
+.HEADER {
+    background-color: rgb(30,64,175); 
+    margin-bottom: 80px; 
+}
+
+.Naslov {
+    font-size:48px; 
+} 
+
+.link {
+    text-decoration: none; 
+    color: rgb(59,110,207) 
+}
+
+.LEFT {
+    margin-right: 10px; 
+    border-radius: 8px; 
+    background-color: rgb(191,219,254); 
+    align-items: center; 
+}
+
+.WHYUS {
+    margin-bottom: 10px; 
+}
+
+.TEXT {
+    padding-top:  8px;  
+}
+ 
+.RIGHT {
+    margin-left: 5px; 
+    padding: 0; 
+    border-radius: 8px; 
+}
+
+.ftr {
+    background-color: rgb(30,64,175); 
+    position: fixed; 
+    width: 100%; 
+    font-size: 80%; 
+    margin-top: 5em; 
+    padding-top: 5px; 
+    padding-bottom: 5px; 
+    bottom: 0; 
+}
