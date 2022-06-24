@@ -1,3 +1,5 @@
+var language = document.getElementById("lang").textContent;
+
 const form = document.getElementById("contactForm");
 
 const Name = document.getElementById("formName");
@@ -30,7 +32,11 @@ function isEmpty(input) {
 
 function hasMinChars(input, length) {
     if(input.value.length <= length) {
-        addErrorMessage(`${input.name} needs to be longer than ${length} characters`);
+        if(language == "english") {
+            addErrorMessage(`${input.name} needs to be longer than ${length} characters`);
+        } else if (language == "serbian") {
+            addErrorMessage(`Polje ${input.name} mora biti duze od ${length} karaktera`);
+        }
         return false;
     } else {
         return true;
@@ -43,7 +49,13 @@ function isEmailValid(email) {
     if(valid)
         return true;
     else {
-        addErrorMessage("Your email is invalid");
+        if(language == "english") {
+            addErrorMessage("Your email is invalid");
+        } else if (language == "serbian") {
+            addErrorMessage("Vas email ne valja");
+        } else {
+            addErrorMessage("Bad language");
+        }
         return false;
     }
 }
