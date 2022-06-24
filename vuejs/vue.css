@@ -1,45 +1,102 @@
-.HEADER {
-    background-color: rgb(30,64,175); 
-    margin-bottom: 80px; 
+:root {
+    --color: #690069;
+    --color-hover: #960096;
+    --color-nav: #69006969;
+    --color-nav-hover: #96009696;
+    --base-color: #FFEEFF;
+    --base-color-pop: #FFCCFF;
+    --side-padding: 8%;
+    --shadow: 0px 0px 48px rgba(0, 0, 0, 16%);
+    --transition: all 0.2s ease-in-out;
+    --transitionSlow: all 0.5s ease-in-out;
+    --border-radius: 8px;
+    --transform: scale(1.015625);
+    --nav-size: 80px;
 }
 
-.Naslov {
-    font-size:48px; 
-} 
-
-.link {
-    text-decoration: none; 
-    color: rgb(59,110,207) 
+body {
+    margin: 0;
+    padding: 0;
+    overflow-wrap: break-word;
+    background-color: var(--base-color);
 }
 
-.LEFT {
-    margin-right: 10px; 
-    border-radius: 8px; 
-    background-color: rgb(191,219,254); 
-    align-items: center; 
+* {
+    color: var(--color);
 }
 
-.WHYUS {
-    margin-bottom: 10px; 
+#header {
+    background-color: var(--base-color-pop);
+    min-height: 69px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
 }
 
-.TEXT {
-    padding-top:  8px;  
-}
- 
-.RIGHT {
-    margin-left: 5px; 
-    padding: 0; 
-    border-radius: 8px; 
+#header h1 {
+    margin: 0;
 }
 
-.ftr {
-    background-color: rgb(30,64,175); 
-    position: fixed; 
-    width: 100%; 
-    font-size: 80%; 
-    margin-top: 5em; 
-    padding-top: 5px; 
-    padding-bottom: 5px; 
-    bottom: 0; 
+footer {
+    background-color: var(--base-color-pop);
+    height: 69px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#content {
+    min-height: 100vh;
+    padding: 8% var(--side-padding);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card {
+    background-color: var(--base-color-pop);
+    border-radius: var(--border-radius);
+    /* min-height: 200px; */
+    margin-bottom: 32px;
+    display: flex;
+    overflow: hidden;
+    width: 90%;
+}
+
+.card img {
+    width: 40%;
+}
+
+.card h1 {
+    padding: 5%;
+    margin: 0;
+}
+
+#logo {
+    padding: 32px;
+    width: 20%;
+}
+
+
+@media screen and (max-width: 800px) {
+    * {
+        text-align: center;
+    }
+
+    #logo {
+        width: 80%;
+    }
+
+    .card {
+        flex-direction: column;
+        width: 100%;
+        /* padding: 32px; */
+    }
+
+    .card img {
+        margin: auto;
+        width: 100%;
+    }
 }

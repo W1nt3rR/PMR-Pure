@@ -23,7 +23,7 @@ function languageCheck() {
 }
 
 // Load Common Footer
-fetch('js/footer.html')
+fetch('js/serbian-footer.html')
     .then(res => res.text())
     .then(text => {
         let footer = document.getElementById("footer");
