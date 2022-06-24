@@ -567,11 +567,11 @@ a {
 
 .faqDropdownAnswer {
     max-height: 0;
+    padding: 0 16px;
     overflow: hidden;
-    transition: var(--transitionSlow);
     background-color: #EEEEEE;
     border-radius: var(--border-radius);
-    padding: 0 16px;
+    transition: var(--transitionSlow);
 }
 
 .faqDropdownButton {
