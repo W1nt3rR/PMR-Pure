@@ -6,9 +6,12 @@ function changeLanguage() {
 
     // currentLocation.substring(currentLocation.indexOf("/") + 1, currentLocation.lastIndexOf("/"));
     // console.log(currentLocation);
-    
+
     if (language == "english") {
-        window.location.href = `serbian-${currentLocation}`;
+        if(currentLocation != "")
+            window.location.href = `serbian-${currentLocation}`;
+        else
+            window.location.href = `serbian-index.html`;
     } else if (language == "serbian") {
         window.location.href = currentLocation.substring(8);
     }
