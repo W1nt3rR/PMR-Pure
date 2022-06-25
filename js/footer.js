@@ -1,8 +1,12 @@
 var language = document.getElementById("lang").textContent;
 
 function changeLanguage() {
-    let currentLocation = window.location.pathname.substring(1);
-    // console.log(currentLocation);
+    let currentPathname = window.location.pathname.split("/");
+    // currentLocation.substring(currentLocation.indexOf("/") + 1, currentLocation.lastIndexOf("/"));
+    
+    let currentLocation = currentPathname[currentPathname.length - 1];
+
+    console.log(currentLocation);
     if (language == "english") {
         window.location.href = `serbian-${currentLocation}`;
     } else if (language == "serbian") {
