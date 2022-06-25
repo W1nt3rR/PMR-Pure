@@ -36,6 +36,8 @@ function hasMinChars(input, length) {
             addErrorMessage(`${input.name} needs to be longer than ${length} characters`);
         } else if (language == "serbian") {
             addErrorMessage(`Polje ${input.name} mora biti duze od ${length} karaktera`);
+        } else {
+            addErrorMessage("Bad language");
         }
         return false;
     } else {
@@ -98,7 +100,13 @@ function submitFunction(event) {
     const textValid = valid(TextInput);
 
     if(nameValid && emailValid && subjectValid && textValid)
-        alert("You have done it");
+        if(language == "english") {
+                alert("You have done it");
+            } else if (language == "serbian") {
+                alert("Cestitam");
+            } else {
+                alert("Bad Language");
+            }
 }
 
 form.addEventListener("submit", submitFunction);

@@ -55,6 +55,8 @@ async function loadNav() {
         result = await fetch("js/nav.html");
     } else if (language == "serbian") {
         result = await fetch("js/serbian-nav.html");
+    } else {
+        addErrorMessage("Bad language");
     }
     
     const navText = await result.text();
